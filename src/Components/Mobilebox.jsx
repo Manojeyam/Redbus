@@ -1,26 +1,14 @@
 import { Alert, Box, Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { RiArrowUpDownFill } from "react-icons/ri";
-import { Naves } from "./Nav";
-import { Carousel } from "./Carousel";
 import "./Style.scss";
-import { MyCarousel } from "./carsl";
-import { IoHomeSharp } from "react-icons/io5";
-import { LuArrowDownUp } from "react-icons/lu";
 import { useDispatch, useSelector } from "react-redux";
 import { MdOutlineDirectionsBusFilled } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { updates } from "./Slices";
 import ReactDatePicker from "react-datepicker";
 import DateRangeIcon from "@mui/icons-material/DateRange";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
-import Drops from "./logs";
-import { MdLiveHelp } from "react-icons/md";
-import { MdAccountCircle } from "react-icons/md";
-import { RiListCheck3 } from "react-icons/ri";
 import "react-datepicker/dist/react-datepicker.css";
-import { FaCalendarAlt } from "react-icons/fa";
 export const Mobile = () => {
   const [in1, setIn1] = useState("");
   const [in2, setIn2] = useState("");
