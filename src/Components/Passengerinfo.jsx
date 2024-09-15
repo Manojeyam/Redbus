@@ -20,9 +20,6 @@ import { passengerinfo, updates } from "./Slices";
 
 export const Passengerinf = (mins) => {
   let [parms] = useSearchParams();
-  let stid = Number(parms.get("stid"));
-  let bsid = Number(parms.get("bsid"));
-  let busnm = Number(parms.get("busnm"));
   let dtss = parms.get("dates");
   const datess = new Date(dtss);
 
@@ -37,7 +34,6 @@ export const Passengerinf = (mins) => {
   const [inp6, setInp6] = useState("");
   const [open, setOpen] = useState(false);
   const [erors, setErors] = useState(false);
-  const [showPassword, setshowPassword] = useState(false);
   const dispatch = useDispatch();
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
