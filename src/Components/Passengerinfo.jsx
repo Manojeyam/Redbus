@@ -26,7 +26,6 @@ export const Passengerinf = (mins) => {
   let dtss = parms.get("dates");
   const datess = new Date(dtss);
 
-  const pasenger = useSelector((da) => da.datas.passengers);
   const stat = useSelector((dat) => dat.datas.Ars);
   //console(mins);
   const [selectedOption, setSelectedOption] = useState("");
@@ -46,7 +45,6 @@ export const Passengerinf = (mins) => {
   let gotohome = useNavigate();
   let backs = () => {
     dispatch(passengerinfo(false));
-    // setPasseenger(false)
   };
   let chcks = ({ target: { name, value } }) => {
     if (name === "names") {
@@ -67,9 +65,6 @@ export const Passengerinf = (mins) => {
     if (name === "passwords") {
       setInp5(value);
     }
-  };
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
   };
   let rdio = (s) => {
     setSelectedOption(s.target.value);
@@ -97,7 +92,6 @@ export const Passengerinf = (mins) => {
           }
         : val;
     });
-    // //console(book);
     dispatch(updates(book));
     dispatch(passengerinfo(false));
     setOpen(false);
@@ -105,9 +99,7 @@ export const Passengerinf = (mins) => {
       `/booking?bsnm=${mins.bsnm}&&sho=${mins.bsid}&&gopoint=${orgnlbus.from}&&reachpoint=${orgnlbus.to}&&dates=${datess}`
     );
   };
-  const handleClickShowPassword = () => {
-    setshowPassword(!showPassword);
-  };
+
 
   let proceedaa = () => {
     if (
@@ -152,14 +144,12 @@ export const Passengerinf = (mins) => {
             sx={{
               position: "absolute",
               top: "50%",
-              /* right: 0; */
               left: {
                 xs: "50%",
                 sm: "50%",
                 md: "75%",
                 xl: "75%",
               },
-              /* bottom: 0%; */
               width: {
                 xs: "100%",
                 sm: "100%",
